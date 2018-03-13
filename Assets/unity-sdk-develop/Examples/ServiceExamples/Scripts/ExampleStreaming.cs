@@ -26,12 +26,13 @@ using UnityEngine.UI;
 
 public class ExampleStreaming : MonoBehaviour
 {
-    private string _username = null;
-    private string _password = null;
-    private string _url = null;
+  private const string _url =  "https://stream.watsonplatform.net/speech-to-text/api";
+  private const string _username = "989fba21-5590-491a-9e34-c6cf683df496";
+  private const string _password = "iXWGPeBfaAGi";
     
     public Text ResultsField;
-
+    public AudioSource inBoop;
+    
     private int _recordingRoutine = 0;
     private string _microphoneID = null;
     private AudioClip _recording = null;
@@ -49,10 +50,17 @@ public class ExampleStreaming : MonoBehaviour
 
         _speechToText = new SpeechToText(credentials);
         Active = true;
-
-        StartRecording();
     }
 
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.T))
+        {
+            StartRecording();
+            inBoop.Play();
+        }
+
+    }
     public bool Active
     {
         get { return _speechToText.IsListening; }
@@ -80,6 +88,7 @@ public class ExampleStreaming : MonoBehaviour
             }
         }
     }
+
 
     private void StartRecording()
     {
@@ -175,7 +184,11 @@ public class ExampleStreaming : MonoBehaviour
                 {
                     string text = string.Format("{0} ({1}, {2:0.00})\n", alt.transcript, res.final ? "Final" : "Interim", alt.confidence);
                     Log.Debug("ExampleStreaming.OnRecognize()", text);
-                    ResultsField.text = text;
+                    if(res.final)
+                    {
+                        ResultsField.text = text;
+                        StopRecording();
+                    }
                 }
 
                 if (res.keywords_result != null && res.keywords_result.keyword != null)
