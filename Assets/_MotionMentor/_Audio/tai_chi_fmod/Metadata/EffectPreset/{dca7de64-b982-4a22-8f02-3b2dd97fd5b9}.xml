@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="EffectPreset" id="{dca7de64-b982-4a22-8f02-3b2dd97fd5b9}">
+        <property name="name">
+            <value>FMOD Gain</value>
+        </property>
+        <relationship name="effect">
+            <destination>{1e15406c-6789-4feb-8a77-f53b611aa283}</destination>
+        </relationship>
+    </object>
+    <object class="GainEffect" id="{1e15406c-6789-4feb-8a77-f53b611aa283}"/>
+</objects>

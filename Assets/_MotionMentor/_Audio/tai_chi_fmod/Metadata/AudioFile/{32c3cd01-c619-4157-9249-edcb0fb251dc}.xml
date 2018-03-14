@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{32c3cd01-c619-4157-9249-edcb0fb251dc}">
+        <property name="assetPath">
+            <value>whoosh_fast.wav</value>
+        </property>
+        <property name="isStreaming">
+            <value>true</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>48</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>102.44266666666667</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{e4d6e7e4-8be1-474a-8666-6e1a0eb8d999}</destination>
+        </relationship>
+    </object>
+</objects>

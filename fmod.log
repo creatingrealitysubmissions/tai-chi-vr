@@ -2,15 +2,14 @@
 [LOG] SystemI::setOutputInternal               : Setting output to 'FMOD WASAPI Output'
 [LOG] Manager::init                            : maxchannels = 1024 studioflags = 00000009 flags 00000000 extradriverdata 0000000000000000.
 [LOG] SystemI::init                            : Initialize version=11004 (93853), maxchannels=1024, flags=0x00030000
-[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEX): wFormatTag=0xFFFE, nChannels=8, nSamplesPerSec=48000, nAvgBytesPerSec=1536000, nBlockAlign=32, wBitsPerSample=32, cbSize=22.
-[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEXTENSIBLE): wValidBitsPerSample=32, dwChannelMask=0x0000063F, SubFormat=00000003-0000-0010-8000-00AA00389B71.
-[LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
-[LOG] DownMix::init                            : dspbuffersize: 1024  rate: 48000. output speaker mode: 7, input speaker mode 3
-[LOG] DownMix::init                            : done.
+[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEX): wFormatTag=0xFFFE, nChannels=2, nSamplesPerSec=44100, nAvgBytesPerSec=352800, nBlockAlign=8, wBitsPerSample=32, cbSize=22.
+[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEXTENSIBLE): wValidBitsPerSample=32, dwChannelMask=0x00000003, SubFormat=00000003-0000-0010-8000-00AA00389B71.
+[LOG] OutputWASAPI::init                       : Output buffer size: 3760 samples, latency: 11.61ms, period: 10.16ms, DSP buffer: 1024 * 4
+[WRN] SystemI::init                            : Output requires a sample rate of 44100Hz, resampling will occur.
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 65536, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 49152, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 000000005044E628 isAsync 1 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 000000003C367E28 isAsync 1 updatePeriod 0.02
 [LOG] Thread::initThread                       : Init FMOD Studio update thread. Priority: 0, Stack Size: 65536, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
@@ -19,152 +18,147 @@
 [LOG] LiveUpdate::init                         : 
 [LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Priority: 0, Stack Size: 65536, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] Manager::init                            : done.
-[ERR] FMOD_OS_Net_Listen                       : bind failed 10048
-[ERR] AsyncManager::asyncThreadLoop            : System::update returned error 43.
-[ERR] FMOD_OS_Net_Listen                       : bind failed 10048
-[ERR] AsyncManager::asyncThreadLoop            : System::update returned error 43.
-[ERR] system_release                           : Failed to call stopRecordCommands during system release (Error code 43)
-[ERR] system_release                           : Failed to call flushCommands during system release (Error code 43)
-[LOG] Thread::callback                         : FMOD Studio update thread finished.
-[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
-[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
-[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
-[LOG] LiveUpdate::release                      : 
-[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
-[ERR] FMOD_OS_Net_Listen                       : bind failed 10048
-[ERR] FMOD_OS_Net_Listen                       : bind failed 10048
-[LOG] Thread::callback                         : FMOD stream thread finished.
-[LOG] Thread::callback                         : FMOD mixer thread finished.
-[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
-[LOG] SystemI::close                           : Closed.
-[LOG] System::create                           : Header version = 1.10.04. Current version = 1.10.04.
-[LOG] SystemI::setOutputInternal               : Setting output to 'FMOD WASAPI Output'
-[LOG] Manager::init                            : maxchannels = 1024 studioflags = 00000008 flags 00000000 extradriverdata 0000000000000000.
-[LOG] SystemI::init                            : Initialize version=11004 (93853), maxchannels=1024, flags=0x00020000
-[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEX): wFormatTag=0xFFFE, nChannels=8, nSamplesPerSec=48000, nAvgBytesPerSec=1536000, nBlockAlign=32, wBitsPerSample=32, cbSize=22.
-[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEXTENSIBLE): wValidBitsPerSample=32, dwChannelMask=0x0000063F, SubFormat=00000003-0000-0010-8000-00AA00389B71.
-[LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
-[LOG] DownMix::init                            : dspbuffersize: 1024  rate: 48000. output speaker mode: 7, input speaker mode 3
-[LOG] DownMix::init                            : done.
-[LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 65536, Semaphore: No, Sleep Time: 10, Looping: Yes.
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 49152, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 000000005044E628 isAsync 1 updatePeriod 0.02
-[LOG] Thread::initThread                       : Init FMOD Studio update thread. Priority: 0, Stack Size: 65536, Semaphore: No, Sleep Time: 1, Looping: No.
-[LOG] AsyncManager::init                       : done
-[LOG] PlaybackSystem::init                     : 
-[LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Priority: 0, Stack Size: 65536, Semaphore: No, Sleep Time: 1, Looping: No.
-[LOG] PlaybackSystem::init                     : done
-[LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Priority: 0, Stack Size: 65536, Semaphore: No, Sleep Time: 1, Looping: No.
-[LOG] Manager::init                            : done.
+[LOG] Profile::init                            : Profiler listening on port: 9264
 [LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
 [LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 3
 [LOG] SystemI::createSound                     : filename = Assets\_MotionMentor\_Audio\tai_chi_fmod\Build\Desktop/Master Bank.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 0000000069D630E8 : node = 000000006939A230
-[LOG] SystemI::createSound                     : add node to async list : head = 000000001C10F938.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000069D630E8
-[LOG] SystemI::createSoundInternal             :     Create name='Assets\_MotionMentor\_Audio\tai_chi_fmod\Build\Desktop/Master Bank.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 2454592
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 16736
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000006939A348
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='411090__inspectorj__wind-chime-gamelan-gong-a', format=2, channels=2, frequency=48000, lengthbytes=89664, lengthpcm=768487, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.725432.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000069D630E8
-[LOG] SoundI::getSubSound                      : sound 0000000069D630E8.  Subsound index 0 / 1
+[LOG] Thread::initThread                       : Init FMOD nonblocking thread (0). Priority: 1, Stack Size: 81920, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
+[LOG] SystemI::createSound                     : setdata soundi = 000000003C0226A8 : node = 000000003C274E30
+[LOG] SystemI::createSound                     : add node to async list : head = 000000003BA8B228.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000003C0226A8
 [LOG] SystemI::createSound                     : filename = Assets\_MotionMentor\_Audio\tai_chi_fmod\Build\Desktop/Master Bank.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000000001BF4C678 : node = 000000006978ACA0
-[LOG] SystemI::createSound                     : add node to async list : head = 000000001C10F938.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001BF4C678
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\_MotionMentor\_Audio\tai_chi_fmod\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSound                     :     setdata soundi = 000000003C022A08 : node = 000000003C274B90
+[LOG] SystemI::createSound                     :     add node to async list : head = 000000003BA8B228.  list count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5316512
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 19872
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSound                     :     filename = Assets\_MotionMentor\_Audio\tai_chi_fmod\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000003C274F48
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSound                     :     setdata soundi = 000000003C904B48 : node = 000000003C274F80
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSound                     :     add node to async list : head = 000000003BA8B228.  list count = 1
+[LOG] SystemI::createSound                     :     filename = Assets\_MotionMentor\_Audio\tai_chi_fmod\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 000000003C904CF8 : node = 000000003C2750D0
+[LOG] SystemI::createSound                     :     add node to async list : head = 000000003BA8B228.  list count = 2
+[LOG] SystemI::createSound                     :     filename = Assets\_MotionMentor\_Audio\tai_chi_fmod\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 000000003C904EA8 : node = 000000003C275220
+[LOG] SystemI::createSound                     :     add node to async list : head = 000000003BA8B228.  list count = 3
+[LOG] SystemI::createSound                     :     filename = Assets\_MotionMentor\_Audio\tai_chi_fmod\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 000000003C905058 : node = 000000003C275370
+[LOG] SystemI::createSound                     :     add node to async list : head = 000000003BA8B228.  list count = 4
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='whoosh_fast', format=2, channels=2, frequency=48000, lengthbytes=1312736, lengthpcm=4917248, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.153907.
+[LOG] Thread::initThread                       :     Init FMOD file thread. Priority: 1, Stack Size: 16384, Semaphore: No, Sleep Time: 10, Looping: Yes.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000003C0226A8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000003C022A08
 [LOG] SystemI::createSoundInternal             :     Create name='Assets\_MotionMentor\_Audio\tai_chi_fmod\Build\Desktop/Master Bank.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 2454592
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 16736
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5316512
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 19872
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000006978ADB8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000003C274CA8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 5334
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='whoosh_medium', format=2, channels=2, frequency=48000, lengthbytes=1299552, lengthpcm=5080947, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.373047.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000003C022A08
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000003C904B48
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\_MotionMentor\_Audio\tai_chi_fmod\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5316512
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 19872
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000003C275098
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 4500
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='whoosh_slow', format=2, channels=2, frequency=48000, lengthbytes=247232, lengthpcm=1155759, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.807312.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000003C904B48
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000003C904CF8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\_MotionMentor\_Audio\tai_chi_fmod\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5316512
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 19872
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000003C2751E8
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='411090__inspectorj__wind-chime-gamelan-gong-a', format=2, channels=2, frequency=48000, lengthbytes=89664, lengthpcm=768487, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.725432.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001BF4C678
-[LOG] SoundI::getSubSound                      : sound 000000001BF4C678.  Subsound index 0 / 1
-[LOG] SystemI::createSound                     : filename = Assets\_MotionMentor\_Audio\tai_chi_fmod\Build\Desktop/Master Bank.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000000001BF4C9D8 : node = 000000006978B090
-[LOG] SystemI::createSound                     : add node to async list : head = 000000001C10F938.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001BF4C9D8
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='whoosh_fast', format=2, channels=2, frequency=48000, lengthbytes=1312736, lengthpcm=4917248, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.153907.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000003C904CF8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000003C904EA8
 [LOG] SystemI::createSoundInternal             :     Create name='Assets\_MotionMentor\_Audio\tai_chi_fmod\Build\Desktop/Master Bank.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 2454592
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 16736
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5316512
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 19872
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000006978B1A8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000003C275338
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 5334
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='411090__inspectorj__wind-chime-gamelan-gong-a', format=2, channels=2, frequency=48000, lengthbytes=89664, lengthpcm=768487, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.725432.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001BF4C9D8
-[LOG] SoundI::getSubSound                      : sound 000000001BF4C9D8.  Subsound index 0 / 1
-[LOG] SystemI::createSound                     : filename = Assets\_MotionMentor\_Audio\tai_chi_fmod\Build\Desktop/Master Bank.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000000001BF4CB88 : node = 000000006978B1E0
-[LOG] SystemI::createSound                     : add node to async list : head = 000000001C10F938.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001BF4CB88
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='whoosh_medium', format=2, channels=2, frequency=48000, lengthbytes=1299552, lengthpcm=5080947, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.373047.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000003C904EA8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000003C905058
 [LOG] SystemI::createSoundInternal             :     Create name='Assets\_MotionMentor\_Audio\tai_chi_fmod\Build\Desktop/Master Bank.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 2454592
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 16736
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5316512
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 19872
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000006978B2F8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000003C275488
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 4500
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='411090__inspectorj__wind-chime-gamelan-gong-a', format=2, channels=2, frequency=48000, lengthbytes=89664, lengthpcm=768487, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.725432.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001BF4CB88
-[LOG] SoundI::getSubSound                      : sound 000000001BF4CB88.  Subsound index 0 / 1
-[LOG] SoundI::release                          : 411090__inspectorj__wind-chime-gamelan-gong-a (0000000069D630E8)
-[LOG] SoundI::release                          :     411090__inspectorj__wind-chime-gamelan-gong-a (0000000069219AE8)
-[LOG] SoundI::release                          :     411090__inspectorj__wind-chime-gamelan-gong-a (0000000069D63298)
-[LOG] SystemI::createSound                     : filename = Assets\_MotionMentor\_Audio\tai_chi_fmod\Build\Desktop/Master Bank.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 00000000836E5DF8 : node = 0000000069C31FC0
-[LOG] SystemI::createSound                     : add node to async list : head = 000000001C10F938.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000836E5DF8
-[LOG] SystemI::createSoundInternal             :     Create name='Assets\_MotionMentor\_Audio\tai_chi_fmod\Build\Desktop/Master Bank.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 2454592
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 16736
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000000069C320D8
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='411090__inspectorj__wind-chime-gamelan-gong-a', format=2, channels=2, frequency=48000, lengthbytes=89664, lengthpcm=768487, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.725432.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000836E5DF8
-[LOG] SoundI::getSubSound                      : sound 00000000836E5DF8.  Subsound index 0 / 1
-[LOG] SoundI::release                          : 411090__inspectorj__wind-chime-gamelan-gong-a (000000001BF4C678)
-[LOG] SoundI::release                          :     411090__inspectorj__wind-chime-gamelan-gong-a (000000006921A308)
-[LOG] SoundI::release                          :     411090__inspectorj__wind-chime-gamelan-gong-a (0000000019AA4AA8)
-[LOG] SoundI::release                          : 411090__inspectorj__wind-chime-gamelan-gong-a (000000001BF4C9D8)
-[LOG] SoundI::release                          :     411090__inspectorj__wind-chime-gamelan-gong-a (0000000069219E28)
-[LOG] SoundI::release                          :     411090__inspectorj__wind-chime-gamelan-gong-a (0000000019AA6E18)
-[LOG] SoundI::release                          : 411090__inspectorj__wind-chime-gamelan-gong-a (000000001BF4CB88)
-[LOG] SoundI::release                          :     411090__inspectorj__wind-chime-gamelan-gong-a (0000000069219FC8)
-[LOG] SoundI::release                          :     411090__inspectorj__wind-chime-gamelan-gong-a (0000000069D56598)
-[LOG] SoundI::release                          : 411090__inspectorj__wind-chime-gamelan-gong-a (00000000836E5DF8)
-[LOG] SoundI::release                          :     411090__inspectorj__wind-chime-gamelan-gong-a (0000000069219AE8)
-[LOG] SoundI::release                          :     411090__inspectorj__wind-chime-gamelan-gong-a (00000000836E5078)
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='whoosh_slow', format=2, channels=2, frequency=48000, lengthbytes=247232, lengthpcm=1155759, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.807312.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000003C905058
+[LOG] SoundI::getSubSound                      : sound 000000003C0226A8.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      : sound 000000003C022A08.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      : sound 000000003C904B48.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      : sound 000000003C904CF8.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      : sound 000000003C904EA8.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      : sound 000000003C905058.  Subsound index 0 / 1
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000003C905208
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000003C905208
+[LOG] SoundI::release                          : whoosh_slow (000000003C904B48)
+[LOG] SoundI::release                          :     whoosh_slow (000000003BA8B5B8)
+[LOG] SoundI::release                          :     whoosh_slow (000000003C905568)
+[LOG] SoundI::release                          : whoosh_medium (000000003C022A08)
+[LOG] SoundI::release                          :     whoosh_medium (000000003BA8B418)
+[LOG] SoundI::release                          :     whoosh_medium (000000003C9053B8)
+[LOG] SoundI::release                          : whoosh_fast (000000003C0226A8)
+[LOG] SoundI::release                          :     whoosh_fast (000000003BA8B278)
+[LOG] SoundI::release                          :     whoosh_fast (000000003C905208)
+[LOG] SoundI::release                          : whoosh_slow (000000003C905058)
+[LOG] SoundI::release                          :     whoosh_slow (000000003BA8BA98)
+[LOG] SoundI::release                          :     whoosh_slow (000000004F6E3A78)
+[LOG] SoundI::release                          : whoosh_medium (000000003C904EA8)
+[LOG] SoundI::release                          :     whoosh_medium (000000003BA8B8F8)
+[LOG] SoundI::release                          :     whoosh_medium (000000003C9058C8)
+[LOG] SoundI::release                          : whoosh_fast (000000003C904CF8)
+[LOG] SoundI::release                          :     whoosh_fast (000000003BA8B758)
+[LOG] SoundI::release                          :     whoosh_fast (000000003C905718)
 [LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
 [LOG] LiveUpdate::release                      : 
 [LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
 [LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] Thread::callback                         : FMOD nonblocking thread (0) finished.
+[LOG] Thread::callback                         : FMOD file thread finished.
 [LOG] SystemI::close                           : Closed.
