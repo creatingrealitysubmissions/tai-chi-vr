@@ -26,11 +26,11 @@ public class TaiChiVoiceEvaluator : MonoBehaviour
 					{
 						Game.Instance.RepositionInstructors(numberTable[words[i-1]]);
 					}
+					int num = 0;
+					Int32.TryParse(words[i-1], out num);
+					if(num != 0)
+						Game.Instance.RepositionInstructors(num);
 				}
-				int num = 0;
-				Int32.TryParse(words[i-1], out num);
-				if(num != 0)
-					Game.Instance.RepositionInstructors(num);
 			}
 
 			foreach(string k in pauseKeywords)

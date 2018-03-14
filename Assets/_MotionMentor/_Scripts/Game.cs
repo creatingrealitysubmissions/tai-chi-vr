@@ -9,8 +9,11 @@ public class Game : MonoBehaviour {
 
 	public List<TaiChiInstructor> Instructors { get; set; }
 
+	public float AnimSpeed { get; set; }
+
 	void Awake()
 	{
+		AnimSpeed = 1;
 		//Check if instance already exists
 		if (Instance == null)
 			 
@@ -57,6 +60,15 @@ public class Game : MonoBehaviour {
 			Quaternion rot = Quaternion.Euler(Vector3.forward);
 			Instructors[i].transform.position = pos;
 			Instructors[i].transform.rotation = rot;
+		}
+	}
+
+	public void SpeedUpInstructors(float amount)
+	{
+		foreach(TaiChiInstructor t in Instructors)
+		{
+			AnimSpeed += amount;
+			t.SpeedUp(amount);
 		}
 	}
 

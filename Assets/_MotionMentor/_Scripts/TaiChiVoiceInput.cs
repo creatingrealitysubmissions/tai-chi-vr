@@ -5,6 +5,7 @@ using IBM.Watson.DeveloperCloud.Services.SpeechToText.v1;
 using IBM.Watson.DeveloperCloud.Utilities;
 using IBM.Watson.DeveloperCloud.DataTypes;
 using System.Collections.Generic;
+using System;
 
 public class TaiChiVoiceInput : MonoBehaviour
 {
@@ -22,6 +23,9 @@ public class TaiChiVoiceInput : MonoBehaviour
     private int _recordingHZ = 22050;
 
     private SpeechToText _speechToText;
+    
+    public bool IsRecording {get; set;}
+    public static Action OnStopRecording;
 
     void Start()
     {
@@ -34,15 +38,6 @@ public class TaiChiVoiceInput : MonoBehaviour
         Active = true;
     }
 
-    void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.T))
-        {
-            StartRecording();
-            _inBoop.Play();
-        }
-
-    }
     public bool Active
     {
         get { return _speechToText.IsListening; }
@@ -71,9 +66,10 @@ public class TaiChiVoiceInput : MonoBehaviour
         }
     }
 
-
-    private void StartRecording()
+    public void StartRecording()
     {
+        _inBoop.Play();
+        IsRecording = true;
         if (_recordingRoutine == 0)
         {
             UnityObjectUtil.StartDestroyQueue();
@@ -83,11 +79,18 @@ public class TaiChiVoiceInput : MonoBehaviour
 
     private void StopRecording()
     {
+        IsRecording = false;
+        
         if (_recordingRoutine != 0)
         {
             Microphone.End(_microphoneID);
             Runnable.Stop(_recordingRoutine);
             _recordingRoutine = 0;
+        }
+
+        if(OnStopRecording != null)
+        {
+            OnStopRecording();
         }
     }
 
