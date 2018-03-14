@@ -34,6 +34,13 @@ public class TaiChiUI : MonoBehaviour {
 		LayerMask mask = LayerMask.GetMask("HandUI");
 
         if (Physics.Raycast(_castBox.transform.position + offset, fwd, out hit, Mathf.Infinity, mask))
-            print(hit.transform.gameObject.name);	
+		{
+            print(hit.transform.gameObject.name);
+			_boundingBox.transform.position = hit.transform.position;
+			if(!_boundingBox.activeSelf)
+			{
+				_boundingBox.SetActive(true);
+			}
+		}
 	}
 }
