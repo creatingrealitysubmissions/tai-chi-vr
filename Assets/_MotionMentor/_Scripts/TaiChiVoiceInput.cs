@@ -96,7 +96,7 @@ public class TaiChiVoiceInput : MonoBehaviour
     {
         Active = false;
 
-        //Log.Debug("ExampleStreaming.OnError()", "Error! {0}", error);
+        Log.Debug("ExampleStreaming.OnError()", "Error! {0}", error);
     }
 
     private IEnumerator RecordingHandler()

@@ -7,13 +7,16 @@ public class Game : MonoBehaviour {
 
 	public static Game Instance { get; set; }
 	
+	[SerializeField] private GameObject _instructorPrefab;
+	[SerializeField] private int _numInstructors = 8;
+
 	public List<TaiChiInstructor> Instructors { get; set; }
 
 	void Awake()
 	{
 		//Check if instance already exists
 		if (Instance == null)
-			
+			 
 			//if not, set instance to this
 			Instance = this;
 		
@@ -34,8 +37,39 @@ public class Game : MonoBehaviour {
 		}
 	}
 
+	void Start()
+	{
+		RepositionInstructors(Instructors.Count);
+	}
+
 	public void RepositionInstructors(int number)
 	{
-		print("repositioning to " + number + " instructors.");
+		if(number > 8 || number < 1)
+			return;
+		
+		foreach(TaiChiInstructor t in Instructors)
+		{
+			t.gameObject.SetActive(false);
+		}
+
+		for (int i = 0; i < number; i++)
+		{
+			Instructors[i].gameObject.SetActive(true);
+			Vector3 center = transform.position;
+			Vector3 pos = CirclePoint(center, 3.5f, 360 / number * i);
+			Quaternion rot = Quaternion.Euler(Vector3.forward);
+			Instructors[i].transform.position = pos;
+			Instructors[i].transform.rotation = rot;
+		}
 	}
+
+	Vector3 CirclePoint (Vector3 center, float radius, float ang)
+	{
+         Vector3 pos;
+         pos.x = center.x + radius * Mathf.Sin(ang * Mathf.Deg2Rad);
+         pos.z = center.z + radius * Mathf.Cos(ang * Mathf.Deg2Rad);
+         pos.y = center.y;
+         return pos;
+     }
+
 }
