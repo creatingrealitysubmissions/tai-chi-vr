@@ -5,7 +5,6 @@ using IBM.Watson.DeveloperCloud.Services.SpeechToText.v1;
 using IBM.Watson.DeveloperCloud.Utilities;
 using IBM.Watson.DeveloperCloud.DataTypes;
 using System.Collections.Generic;
-using UnityEngine.UI;
 
 public class TaiChiVoiceInput : MonoBehaviour
 {

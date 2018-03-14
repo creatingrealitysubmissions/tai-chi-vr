@@ -6,9 +6,6 @@ using System.Linq;
 public class Game : MonoBehaviour {
 
 	public static Game Instance { get; set; }
-	
-	[SerializeField] private GameObject _instructorPrefab;
-	[SerializeField] private int _numInstructors = 8;
 
 	public List<TaiChiInstructor> Instructors { get; set; }
 
