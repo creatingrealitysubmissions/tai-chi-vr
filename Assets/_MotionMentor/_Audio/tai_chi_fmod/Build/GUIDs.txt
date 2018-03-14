@@ -1,0 +1,7 @@
+{2fd07282-2067-4045-8fc5-849475834551} event:/main/3d wind chimes
+{16fd498f-44fe-40cb-93ac-5c95e3aaff2c} event:/main/405561__inspectorj__wind-realistic-a
+{01bb783d-01b9-4d0a-b30d-1e5124c83ada} event:/main/IntroSequence
+{7e4eee2c-e7e3-4a2f-92f6-8cd4578b2eec} event:/main/ui_sound_gamelan
+{3140805c-f5a3-4c66-b710-1491360aa217} bus:/
+{495bcc6e-cf4d-4574-b05f-9240e618c975} bus:/Reverb
+{dfa7eb8b-6049-4e40-bae5-ea02a39a7073} bank:/Master Bank
