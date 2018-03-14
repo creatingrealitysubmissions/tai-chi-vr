@@ -65,7 +65,7 @@ namespace IBM.Watson.DeveloperCloud.Debug
                 }
                 else
                 {
-                    //UnityEngine.Debug.Log(logString);
+                    UnityEngine.Debug.Log(logString);
                 }
             }
         }

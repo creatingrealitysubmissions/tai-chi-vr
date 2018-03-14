@@ -26,9 +26,9 @@ using IBM.Watson.DeveloperCloud.Connection;
 
 public class ExampleSpeechToText : MonoBehaviour
 {
-  private const string _url =  "https://stream.watsonplatform.net/speech-to-text/api";
-  private const string _username = "989fba21-5590-491a-9e34-c6cf683df496";
-  private const string _password = "iXWGPeBfaAGi";
+    private string _username = null;
+    private string _password = null;
+    private string _url = null;
 
     private SpeechToText _speechToText;
 
