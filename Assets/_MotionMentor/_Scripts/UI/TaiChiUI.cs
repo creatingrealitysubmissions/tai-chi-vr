@@ -44,38 +44,41 @@ public class TaiChiUI : MonoBehaviour {
 	
 	void LateUpdate () 
 	{
-        Vector3 fwd = _castBox.transform.TransformDirection(Vector3.forward);
-		
-		float xOffset = ((_castBox.transform.localScale.x * transform.localScale.x) / 2) * _rControllerInput.touchpadX;
-		float yOffset = ((_castBox.transform.localScale.y * transform.localScale.y) / 2) * _rControllerInput.touchpadY;
-
-		Vector3 offset = new Vector3(xOffset, yOffset, 0);
-
-		_testPointer.transform.position = _castBox.transform.position + offset;
-		RaycastHit hit;
-
-		LayerMask mask = LayerMask.GetMask("HandUI");
-
-        if (Physics.Raycast(_castBox.transform.position + offset, fwd, out hit, Mathf.Infinity, mask))
+		if(Game.Instance.UIEnabled)
 		{
-			if(IconOver == null)
-				if(hit.transform.GetComponent<TaiChiIcon>() != null)
-				{
-					IconOver = hit.transform.GetComponent<TaiChiIcon>();
-					HighlightIcon(hit.transform);
-				}
+			Vector3 fwd = _castBox.transform.TransformDirection(Vector3.forward);
+			
+			float xOffset = ((_castBox.transform.localScale.x * transform.localScale.x) / 2) * _rControllerInput.touchpadX;
+			float yOffset = ((_castBox.transform.localScale.y * transform.localScale.y) / 2) * _rControllerInput.touchpadY;
 
-			if(IconOver != null)
-				if(hit.transform != IconOver.transform && hit.transform.GetComponent<TaiChiIcon>() != null)
-				{
-					IconOver = hit.transform.GetComponent<TaiChiIcon>();
-					HighlightIcon(hit.transform);
-				}
-		}
-		else
-		{
-			IconOver = null;
-			_boundingBox.SetActive(false);
+			Vector3 offset = new Vector3(xOffset, yOffset, 0);
+
+			_testPointer.transform.position = _castBox.transform.position + offset;
+			RaycastHit hit;
+
+			LayerMask mask = LayerMask.GetMask("HandUI");
+
+			if (Physics.Raycast(_castBox.transform.position + offset, fwd, out hit, Mathf.Infinity, mask))
+			{
+				if(IconOver == null)
+					if(hit.transform.GetComponent<TaiChiIcon>() != null)
+					{
+						IconOver = hit.transform.GetComponent<TaiChiIcon>();
+						HighlightIcon(hit.transform);
+					}
+
+				if(IconOver != null)
+					if(hit.transform != IconOver.transform && hit.transform.GetComponent<TaiChiIcon>() != null)
+					{
+						IconOver = hit.transform.GetComponent<TaiChiIcon>();
+						HighlightIcon(hit.transform);
+					}
+			}
+			else
+			{
+				IconOver = null;
+				_boundingBox.SetActive(false);
+			}
 		}
 	}
 

@@ -9,7 +9,7 @@ public class Play : TaiChiIcon
 
 	private bool _playing;
 
-	private bool Playing
+	public bool Playing
 	{
 		get
 		{
@@ -31,6 +31,7 @@ public class Play : TaiChiIcon
 		_playRend = GetComponent<MeshRenderer>();
 		_playRend.enabled = true;
 		_pauseRend.enabled = false;
+		Playing = true;
 	}
 
 	public override void Select()
@@ -42,15 +43,9 @@ public class Play : TaiChiIcon
 	void Pause(bool pause)
 	{
 		if(pause)
-			foreach(TaiChiInstructor t in Game.Instance.Instructors)
-			{
-				t.Pause();
-			}	
+			Game.Instance.SetInstructorSpeed(0);	
 		if(!pause)
-			foreach(TaiChiInstructor t in Game.Instance.Instructors)
-			{
-				t.Resume();
-			}	
+			Game.Instance.SetInstructorSpeed(1);
 		Playing = !Playing;
 	}
 }

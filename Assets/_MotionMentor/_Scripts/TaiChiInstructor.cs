@@ -11,6 +11,7 @@ public class TaiChiInstructor : MonoBehaviour
 	void Awake()
 	{
 		anim = GetComponentInChildren<Animator>();
+		meshRenderer = GetComponentInChildren<MeshRenderer>();
 	}
 	
 	public void Disable()
@@ -34,13 +35,8 @@ public class TaiChiInstructor : MonoBehaviour
 		anim.speed = 1;
 	}
 
-	public void SpeedUp( float amount )
-	{
-		anim.speed += amount;
-	}
-
 	public void SetAnimSpeed(float value)
 	{
-		anim.speed = value;
+		anim.SetFloat(Animator.StringToHash("Speed"), value);
 	}
 }

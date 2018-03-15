@@ -7,6 +7,6 @@ public class AddInstructor : TaiChiIcon
     public override void Select()
     {
         base.Select();
-        Game.Instance.RepositionInstructors(Game.Instance.Instructors.Count + 1);
+        Game.Instance.RepositionInstructors(Game.Instance.InstructorAmount + 1);
     }
 }

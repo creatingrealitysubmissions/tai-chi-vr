@@ -25,6 +25,6 @@ public class TaiChiIcon : MonoBehaviour
 
 	public virtual void Update()
 	{
-		
+
 	}
 }
