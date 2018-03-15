@@ -93,4 +93,8 @@ public class TaiChiUI : MonoBehaviour {
 		if(IconOver != null)
 			IconOver.Select();
 	}
+    public void Update()
+    {
+        print(_rControllerInput.touchpadX);
+    }
 }
