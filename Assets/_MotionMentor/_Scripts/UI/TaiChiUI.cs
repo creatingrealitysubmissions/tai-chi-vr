@@ -44,8 +44,6 @@ public class TaiChiUI : MonoBehaviour {
 	
 	void LateUpdate () 
 	{
-		if(Game.Instance.UIEnabled)
-		{
 			Vector3 fwd = _castBox.transform.TransformDirection(Vector3.forward);
 			
 			float xOffset = ((_castBox.transform.localScale.x * transform.localScale.x) / 2) * _rControllerInput.touchpadX;
@@ -79,7 +77,6 @@ public class TaiChiUI : MonoBehaviour {
 				IconOver = null;
 				_boundingBox.SetActive(false);
 			}
-		}
 	}
 
 	void HighlightIcon(Transform t)

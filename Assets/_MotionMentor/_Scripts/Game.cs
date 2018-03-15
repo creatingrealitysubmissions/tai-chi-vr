@@ -34,9 +34,9 @@ public class Game : MonoBehaviour {
 		DontDestroyOnLoad(gameObject);
 
 		Init();
-		//StartGame();
-
-	}
+        //StartGame();
+        UIEnabled = true;
+    }
 
 	void Init()
 	{

@@ -9,6 +9,7 @@ public class controller_wind_sound : MonoBehaviour {
 	public float SpeedFactor = 0.4f;
 
 
+    private Vector3 previous;
 
 	// Rigidbody
 	Rigidbody rb;
@@ -26,9 +27,10 @@ public class controller_wind_sound : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Vector3 v3Velocity = rb.velocity;
-
-		float scaled_velocity = SpeedFactor * v3Velocity.magnitude;
+        Vector3 current = transform.position;
+		Vector3 v3Velocity = (current - previous);
+        previous = current;
+		float scaled_velocity = SpeedFactor * v3Velocity.magnitude / Time.deltaTime;
 		scaled_velocity = Mathf.Clamp (scaled_velocity, 0.0f, 1.0f);
 		//handspeed.setValue (scaled_velocity);
 		wind_event.SetParameter ("handspeed", scaled_velocity);
