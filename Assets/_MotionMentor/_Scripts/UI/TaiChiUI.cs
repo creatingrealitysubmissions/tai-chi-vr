@@ -46,12 +46,18 @@ public class TaiChiUI : MonoBehaviour {
 	{
 			Vector3 fwd = _castBox.transform.TransformDirection(Vector3.forward);
 			
-			float xOffset = ((_castBox.transform.localScale.x * transform.localScale.x) / 2) * _rControllerInput.touchpadX;
-			float yOffset = ((_castBox.transform.localScale.y * transform.localScale.y) / 2) * _rControllerInput.touchpadY;
+			float xOffset = ((_castBox.transform.localScale.x * transform.localScale.x) / 2) * _rControllerInput.Touchpad.x;
+			float yOffset = ((_castBox.transform.localScale.y * transform.localScale.y) / 2) * _rControllerInput.Touchpad.y;
 
 			Vector3 offset = new Vector3(xOffset, yOffset, 0);
 
-			_testPointer.transform.position = _castBox.transform.position + offset;
+			// Vector3 cursorPos = _castBox.transform.position;
+			// cursorPos += _castBox.transform.up * yOffset;
+			// cursorPos += _castBox.transform.right * xOffset;
+			_testPointer.transform.position = _castBox.transform.position + offset; //Vector3.Scale(offset, transform.forward);
+
+			//_testPointer.transform.localPosition += offset;
+
 			RaycastHit hit;
 
 			LayerMask mask = LayerMask.GetMask("HandUI");

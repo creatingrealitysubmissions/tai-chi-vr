@@ -12,17 +12,17 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 114907827354433010}
-  - {fileID: 114371192231134252}
+  - {fileID: 114138573091926746}
+  - {fileID: 114808217080975740}
   EditorEvents:
-  - {fileID: 114222843547832800}
-  - {fileID: 114574900894916320}
-  - {fileID: 114218091465601562}
-  - {fileID: 114112427904607606}
-  - {fileID: 114896862101455364}
-  MasterBankRef: {fileID: 114371192231134252}
-  StringsBankRef: {fileID: 114907827354433010}
-  stringsBankWriteTime: 636566437045913220
+  - {fileID: 114267212898089332}
+  - {fileID: 114898839444546382}
+  - {fileID: 114966875979624932}
+  - {fileID: 114528818350347452}
+  - {fileID: 114735026698806292}
+  MasterBankRef: {fileID: 114808217080975740}
+  StringsBankRef: {fileID: 114138573091926746}
+  stringsBankWriteTime: 636571017570000000
   cacheVersion: 2
 --- !u!114 &114102794491067992
 MonoBehaviour:
@@ -56,7 +56,7 @@ MonoBehaviour:
   Path: event:/main/405561__inspectorj__wind-realistic-a
   guid: 8f49fd16fe44cb4093ac5c95e3aaff2c
   Banks:
-  - {fileID: 114371192231134252}
+  - {fileID: 114142891862521856}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -64,6 +64,43 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 75
   Length: 48087
+--- !u!114 &114138573091926746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: Assets/_MotionMentor/_Audio/tai_chi_fmod/Build/Desktop/Master Bank.strings.bank
+  lastModified: 636571017570000000
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 942
+  Exists: 1
+--- !u!114 &114142891862521856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\projects\TaiChiVR\Assets\_MotionMentor\_Audio\tai_chi_fmod\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636566472380000000
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 5336384
+  Exists: 1
 --- !u!114 &114167379736933942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,7 +152,7 @@ MonoBehaviour:
   Path: event:/main/3d wind chimes
   guid: 8272d02f672045408fc5849475834551
   Banks:
-  - {fileID: 114371192231134252}
+  - {fileID: 114142891862521856}
   IsStream: 1
   Is3D: 1
   IsOneShot: 1
@@ -137,7 +174,29 @@ MonoBehaviour:
   Path: event:/main/ui_sound_gamelan
   guid: 2cee4e7ee3e72f4a92f68cd4578b2eec
   Banks:
-  - {fileID: 114371192231134252}
+  - {fileID: 114142891862521856}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 16010
+--- !u!114 &114267212898089332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/main/ui_sound_gamelan
+  guid: 2cee4e7ee3e72f4a92f68cd4578b2eec
+  Banks:
+  - {fileID: 114808217080975740}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -202,6 +261,21 @@ MonoBehaviour:
   - Name: Desktop
     Value: 2471328
   Exists: 1
+--- !u!114 &114428443468008328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: handspeed
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114435643286914920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,7 +298,59 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 111332
+--- !u!114 &114452545332292656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: handspeed
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114462156132513744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: handspeed
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114528818350347452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/main/405561__inspectorj__wind-realistic-a
+  guid: 8f49fd16fe44cb4093ac5c95e3aaff2c
+  Banks:
+  - {fileID: 114808217080975740}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 75
+  Length: 48087
+--- !u!114 &114530081511502382
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -268,7 +394,7 @@ MonoBehaviour:
   Path: event:/main/IntroSequence
   guid: 3d78bb01b9010a4db30d1e5124c83ada
   Banks:
-  - {fileID: 114371192231134252}
+  - {fileID: 114142891862521856}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -276,6 +402,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 111332
+--- !u!114 &114735026698806292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/main/hand_swoosh
+  guid: abcf34f32496f54984ec3538b8045eed
+  Banks:
+  - {fileID: 114808217080975740}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 114452545332292656}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 16000
 --- !u!114 &114752545356822224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -358,6 +507,25 @@ MonoBehaviour:
   - Name: Desktop
     Value: 5336384
   Exists: 1
+--- !u!114 &114808217080975740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: /Users/octopal/Projects/taichivr/Assets/_MotionMentor/_Audio/tai_chi_fmod/Build/Desktop/Master
+    Bank.bank
+  lastModified: 636571017570000000
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 5336384
+  Exists: 1
 --- !u!114 &114896862101455364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -372,15 +540,37 @@ MonoBehaviour:
   Path: event:/main/hand_swoosh
   guid: abcf34f32496f54984ec3538b8045eed
   Banks:
-  - {fileID: 114371192231134252}
+  - {fileID: 114142891862521856}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 114462156132513744}
+  - {fileID: 114428443468008328}
   MinDistance: 1
   MaxDistance: 20
   Length: 16000
+--- !u!114 &114898839444546382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/main/IntroSequence
+  guid: 3d78bb01b9010a4db30d1e5124c83ada
+  Banks:
+  - {fileID: 114808217080975740}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 111332
 --- !u!114 &114907827354433010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -393,7 +583,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Assets\_MotionMentor\_Audio\tai_chi_fmod\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636566437045913220
+  lastModified: 636566472380000000
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -433,3 +623,25 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114966875979624932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/main/3d wind chimes
+  guid: 8272d02f672045408fc5849475834551
+  Banks:
+  - {fileID: 114808217080975740}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 25835

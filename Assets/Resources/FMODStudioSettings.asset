@@ -13,9 +13,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: Assets\_MotionMentor\_Audio\tai_chi_fmod\tai_chi_fmod.fspro
-  SourceProjectPathUnformatted: Assets\_MotionMentor\_Audio\tai_chi_fmod\tai_chi_fmod.fspro
-  SourceBankPathUnformatted: Assets\_MotionMentor\_Audio\tai_chi_fmod\Build
+  sourceProjectPath: Assets/_MotionMentor/_Audio/tai_chi_fmod/tai_chi_fmod.fspro
+  SourceProjectPathUnformatted: Assets/_MotionMentor/_Audio/tai_chi_fmod/tai_chi_fmod.fspro
+  SourceBankPathUnformatted: Assets/_MotionMentor/_Audio/tai_chi_fmod/Build
   AutomaticEventLoading: 1
   AutomaticSampleLoading: 0
   ImportType: 0
@@ -33,7 +33,7 @@ MonoBehaviour:
     Value: 0
   OverlaySettings:
   - Platform: 1
-    Value: 1
+    Value: 0
   - Platform: 2
     Value: 0
   LoggingSettings:
